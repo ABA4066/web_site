@@ -2,14 +2,14 @@ import { defineAstroPaperConfig } from "./src/types/config";
 
 export default defineAstroPaperConfig({
   site: {
-    url: "https://astro-paper.pages.dev/",
+    url: "https://burakafsar.com/",
     title: "Burak AFŞAR",
-    description: "A minimal, responsive and SEO-friendly Astro blog theme.",
-    author: "Sat Naing",
-    profile: "https://satna.ing",
+    description: "A page about my academic career in Astronomy and Astrophysics.",
+    author: "Burak AFŞAR",
+    profile: "https://burakafsar.com/",
     ogImage: "default-og.jpg",
     lang: "en",
-    timezone: "Asia/Bangkok",
+    timezone: "Europe/Istanbul",
     dir: "ltr",
   },
   posts: {

@@ -74,28 +74,34 @@ const isActive = (path: string) => {
         id="menu-items"
         class="[&>li>a]:hover:text-accent mt-4 hidden w-44 grid-cols-2 place-content-center gap-2 sm:mt-0 sm:flex sm:w-auto sm:gap-x-5 sm:gap-y-0 sm:[&>li]:h-8 [&>li>a]:block [&>li>a]:px-4 [&>li>a]:py-3 [&>li>a]:text-center [&>li>a]:font-medium sm:[&>li>a]:px-2 sm:[&>li>a]:py-1"
       >
-        <!-- Ana Menü Linkleri -->
         <li class="col-span-2">
-          <a href="/hakkimda" class:list={{ "active-nav": isActive("/hakkimda") }}>
-            Hakkımda
-          </a>
+          <a href="/hakkimda">Hakkımda</a>
         </li>
         <li class="col-span-2">
-          <a href="/egitimim" class:list={{ "active-nav": isActive("/egitimim") }}>
-            Eğitimim
-          </a>
+          <a href="/egitimim">Eğitimim</a>
         </li>
         <li class="col-span-2">
-          <a href="/okuldan-kareler" class:list={{ "active-nav": isActive("/okuldan-kareler") }}>
-            Okuldan Kareler
-          </a>
+          <a href="/okuldan-kareler">Okuldan Kareler</a>
         </li>
 
-        <!-- Arama ve Tema Butonları (Orijinaldeki gibi bırakıldı) -->
+        <!-- Tr, En, Jp Dil Seçenekleri -->
+        <li class="col-span-2 flex items-center justify-center gap-2 sm:ml-2">
+          <a href="/" class="hover:text-accent font-semibold px-1">Tr</a>
+          <span class="text-skin-base opacity-50">|</span>
+          <a href="/en" class="hover:text-accent font-semibold px-1">En</a>
+          <span class="text-skin-base opacity-50">|</span>
+          <a href="/jp" class="hover:text-accent font-semibold px-1">Jp</a>
+        </li>
+
         {
           features.search !== false && (
             <li class="col-span-1 flex items-center justify-center">
-              <LinkButton href="/search" class="focus-outline relative size-8" title="Ara" aria-label="Ara">
+              <LinkButton
+                href="/search"
+                class="focus-outline relative size-8"
+                title="Ara"
+                aria-label="Ara"
+              >
                 <IconSearch class="absolute top-1/2 left-1/2 size-6 -translate-x-1/2 -translate-y-1/2" />
               </LinkButton>
             </li>
@@ -104,20 +110,19 @@ const isActive = (path: string) => {
         {
           features.lightAndDarkMode && (
             <li class="col-span-1 flex items-center justify-center">
-              <button id="theme-btn" class="focus-outline hover:[&>svg]:stroke-accent relative size-12 p-4 sm:size-8" title="Temayı Değiştir">
+              <button
+                id="theme-btn"
+                class="focus-outline hover:[&>svg]:stroke-accent relative size-12 p-4 sm:size-8"
+                title="Temayı Değiştir"
+                aria-label="auto"
+                aria-live="polite"
+              >
                 <IconMoon class="absolute top-[50%] left-[50%] translate-[-50%] scale-100 rotate-0 transition-all dark:scale-0 dark:-rotate-90" />
                 <IconSunHigh class="absolute top-[50%] left-[50%] translate-[-50%] scale-0 rotate-90 transition-all dark:scale-100 dark:rotate-0" />
               </button>
             </li>
           )
         }
-
-        <!-- Dil Seçenekleri (En Sağda, Çizgiyle Ayrılmış) -->
-        <li class="col-span-2 flex items-center justify-center gap-3 sm:ml-4 sm:border-l sm:border-skin-line sm:pl-4">
-          <a href="/" class="hover:text-accent font-semibold">Tr</a>
-          <a href="/en" class="hover:text-accent font-semibold">En</a>
-          <a href="/jp" class="hover:text-accent font-semibold">Jp</a>
-        </li>
       </ul>
     </nav>
   </div>

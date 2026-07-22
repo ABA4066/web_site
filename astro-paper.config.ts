@@ -30,16 +30,8 @@ export default defineAstroPaperConfig({
   },
   socials: [
     { name: "github",   url: "https://github.com/ABA4066" },
-    { name: "x",        url: "https://x.com/username" },
-    { name: "linkedin", url: "www.linkedin.com/in/burak-afsar" },
+    { name: "linkedin", url: "https://www.linkedin.com/in/burak-afsar" },
     { name: "mail",     url: "mailto:burakafsar4066@gmail.com" },
   ],
-  shareLinks: [
-    { name: "whatsapp", url: "https://wa.me/?text=" },
-    { name: "facebook", url: "https://www.facebook.com/sharer.php?u=" },
-    { name: "x",        url: "https://x.com/intent/post?url=" },
-    { name: "telegram", url: "https://t.me/share/url?url=" },
-    { name: "pinterest", url: "https://pinterest.com/pin/create/button/?url=" },
-    { name: "mail",     url: "mailto:?subject=See%20this%20post&body=" },
-  ],
+  shareLinks: [],
 });

@@ -33,18 +33,316 @@ const homePath = getRelativeLocaleUrl(locale, "");
     data-home-path={homePath}
     class="app-layout"
   >
-<section id="hero">
-  <p>
-    Merhaba! Ben Burak. Astronomi ve Uzay Bilimleri alanında lisans eğitimi alıyor; 
-    teorik fizik, astrofizik ve yörünge mekaniği üzerine çalışmalar yürütüyorum.
-  </p>
-  <p>
-    Şu sıralar Güneş-Jüpiter sistemindeki anomaliyi hesaplayıp ufuk koordinatlarına 
-    haritalayan <strong>Kont Lagrange</strong> adındaki otomatik göksel koordinat takip 
-    yazılımı projem üzerinde çalışıyorum. Bu portfolyoda hem akademik araştırmalarımı 
-    hem de yazılım projelerimi paylaşıyorum.
-  </p>
-</section>
+<section id="hero" class="custom-portfolio">
+      <!-- Üst Rozet -->
+      <div class="status-badge">
+        <span class="dot"></span>
+        Astronomi ve Uzay Bilimleri • Lisans Araştırmacısı
+      </div>
+
+      <!-- Ana Başlık ve Akademik Özet -->
+      <h1 class="hero-title">Merhaba, ben Burak Afşar.</h1>
+      
+      <p class="hero-bio">
+        Ankara Üniversitesi Astronomi ve Uzay Bilimleri Bölümü'nde lisans araştırmacısıyım. 
+        Çalışmalarım <strong>gözlemsel astrofizik</strong>, <strong>ötegezegen geçiş (transit) fotometrisi</strong>, 
+        <strong>yıldız atmosferleri tayf analizi</strong> ve <strong>yörünge mekaniği</strong> üzerine odaklanıyor. 
+        Teorik modelleri ve teleskop gözlem verilerini Python tabanlı bilimsel yazılımlarla işliyorum.
+      </p>
+
+      <!-- Hızlı Aksiyon Butonları -->
+      <div class="hero-actions">
+        <a href="https://github.com/ABA4066" target="_blank" class="btn-primary">
+          GitHub Projelerim ↗
+        </a>
+        <a href="/hakkimda" class="btn-secondary">
+          Akademik Özgeçmiş (CV)
+        </a>
+        <a href="mailto:burakafsar4066@gmail.com" class="btn-secondary">
+          İletişime Geç
+        </a>
+      </div>
+
+      <hr class="section-divider" />
+
+      <!-- Seçilmiş Araştırmalar & Projeler (Bento Grid) -->
+      <h2 class="section-heading">Araştırmalar & Geliştirilen Projeler</h2>
+      
+      <div class="project-grid">
+        <!-- Kart 1: Kont Lagrange -->
+        <div class="project-card">
+          <div class="card-header">
+            <span class="card-category">Yörünge Mekaniği & Yazılım</span>
+            <span class="card-year">2026</span>
+          </div>
+          <h3 class="card-title">Kont Lagrange!</h3>
+          <p class="card-desc">
+            Güneş-Jüpiter sistemindeki yörünge anomalilerini hesaplayarak Jülyen Tarihi, ekliptik, ekvatoral ve ufuk koordinat sistemleri arasında hassas haritalama yapan otomatik göksel koordinat takip yazılımı.
+          </p>
+          <div class="tag-list">
+            <span>Python</span>
+            <span>Astropy</span>
+            <span>Gök Mekaniği</span>
+            <span>Koordinat Dönüşümü</span>
+          </div>
+        </div>
+
+        <!-- Kart 2: Ötegezegen ve Çift Yıldız Fotometrisi -->
+        <div class="project-card">
+          <div class="card-header">
+            <span class="card-category">Gözlemsel Astrofizik</span>
+            <span class="card-year">T80 & T100</span>
+          </div>
+          <h3 class="card-title">Ötegezegen Geçişleri & Çift Yıldızlar</h3>
+          <p class="card-desc">
+            Yer tabanlı 80 cm ve 100 cm teleskop verileriyle diferansiyel fotometri, ötegezegen geçiş (transit) ışık eğrisi modellemesi ve örten çift yıldızların O-C dönem değişimi analizleri.
+          </p>
+          <div class="tag-list">
+            <span>AstroImageJ</span>
+            <span>EXOFASTv2</span>
+            <span>Photutils</span>
+            <span>PyWD2015</span>
+          </div>
+        </div>
+
+        <!-- Kart 3: Yıldız Spektroskopisi -->
+        <div class="project-card">
+          <div class="card-header">
+            <span class="card-category">Spektroskopi & Astrokimya</span>
+            <span class="card-year">Araştırma</span>
+          </div>
+          <h3 class="card-title">Yıldız Atmosferleri & Tayf Analizi</h3>
+          <p class="card-desc">
+            Yüksek çözünürlüklü FITS tayf verileri üzerinden kromosferik aktivite (Ca II H & K) incelemeleri, çizgi profili modellemesi ve yıldız atmosfer kodlarıyla kimyasal bolluk tayini.
+          </p>
+          <div class="tag-list">
+            <span>iSpec</span>
+            <span>MOOG</span>
+            <span>ATLAS9</span>
+            <span>SOPHIE FITS</span>
+          </div>
+        </div>
+
+        <!-- Kart 4: Gözlemevi & Veri Hatları -->
+        <div class="project-card">
+          <div class="card-header">
+            <span class="card-category">Veri İşleme & Gözlem</span>
+            <span class="card-year">ANKUR</span>
+          </div>
+          <h3 class="card-title">Fotometrik & Tayfsal Veri Hatları</h3>
+          <p class="card-desc">
+            Kalabalık yıldız alanlarında PSF fotometrisi, katalog eşleştirmeleri (Gaia / SIMBAD) ve gözlemsel ham verilerin indirgenmesi için geliştirilen özel Python betikleri.
+          </p>
+          <div class="tag-list">
+            <span>Lightkurve</span>
+            <span>Aladin Sky Atlas</span>
+            <span>NumPy / SciPy</span>
+            <span>Linux</span>
+          </div>
+        </div>
+      </div>
+
+      <hr class="section-divider" />
+
+      <!-- Bilimsel Araç Seti (Toolkit) -->
+      <h2 class="section-heading">Teknik Yetkinlikler & Bilimsel Araç Seti</h2>
+      
+      <div class="toolkit-container">
+        <div class="toolkit-group">
+          <h4>Astrofizik & Modelleme</h4>
+          <div class="Badge-group">
+            <span>AstroImageJ</span>
+            <span>EXOFASTv2</span>
+            <span>iSpec</span>
+            <span>MOOG</span>
+            <span>ATLAS9</span>
+            <span>PyWD2015-Qt5</span>
+            <span>OCFit</span>
+            <span>Aladin</span>
+            <span>IDL (AstroLib)</span>
+          </div>
+        </div>
+
+        <div class="toolkit-group">
+          <h4>Programlama & Sistem</h4>
+          <div class="Badge-group">
+            <span>Python</span>
+            <span>Astropy</span>
+            <span>Photutils</span>
+            <span>NumPy / SciPy</span>
+            <span>Matplotlib</span>
+            <span>Lightkurve</span>
+            <span>Ubuntu Linux</span>
+            <span>Git</span>
+            <span>LaTeX</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <style>
+      .custom-portfolio {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        padding: 2rem 0 3rem 0;
+      }
+      .status-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.35rem 0.85rem;
+        border-radius: 999px;
+        font-size: 0.8rem;
+        font-weight: 500;
+        background: rgba(255, 107, 1, 0.1);
+        border: 1px solid rgba(255, 107, 1, 0.3);
+        margin-bottom: 1.25rem;
+      }
+      .status-badge .dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: #ff6b01;
+        box-shadow: 0 0 8px #ff6b01;
+      }
+      .hero-title {
+        font-size: 2.25rem;
+        font-weight: 800;
+        letter-spacing: -0.02em;
+        margin-bottom: 1rem;
+        line-height: 1.2;
+      }
+      .hero-bio {
+        font-size: 1.05rem;
+        line-height: 1.75;
+        opacity: 0.9;
+        margin-bottom: 1.75rem;
+      }
+      .hero-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.75rem;
+        margin-bottom: 2.5rem;
+      }
+      .btn-primary {
+        padding: 0.6rem 1.25rem;
+        border-radius: 0.5rem;
+        font-weight: 600;
+        font-size: 0.9rem;
+        background: #ff6b01;
+        color: #fff !important;
+        text-decoration: none;
+        transition: transform 0.15s ease, opacity 0.15s ease;
+      }
+      .btn-primary:hover {
+        opacity: 0.9;
+        transform: translateY(-1px);
+      }
+      .btn-secondary {
+        padding: 0.6rem 1.25rem;
+        border-radius: 0.5rem;
+        font-weight: 500;
+        font-size: 0.9rem;
+        border: 1px solid rgba(150, 150, 150, 0.3);
+        background: rgba(150, 150, 150, 0.05);
+        text-decoration: none;
+        transition: border-color 0.15s ease, background 0.15s ease;
+      }
+      .btn-secondary:hover {
+        border-color: #ff6b01;
+        background: rgba(255, 107, 1, 0.05);
+      }
+      .section-divider {
+        border: 0;
+        border-top: 1px solid rgba(150, 150, 150, 0.2);
+        margin: 2.5rem 0;
+      }
+      .section-heading {
+        font-size: 1.35rem;
+        font-weight: 700;
+        margin-bottom: 1.25rem;
+        letter-spacing: -0.01em;
+      }
+      .project-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 1.25rem;
+      }
+      .project-card {
+        padding: 1.35rem;
+        border-radius: 0.75rem;
+        border: 1px solid rgba(150, 150, 150, 0.22);
+        background: rgba(150, 150, 150, 0.03);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+      }
+      .project-card:hover {
+        transform: translateY(-3px);
+        border-color: rgba(255, 107, 1, 0.6);
+        box-shadow: 0 8px 24px -10px rgba(255, 107, 1, 0.2);
+      }
+      .card-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 0.75rem;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        opacity: 0.7;
+        margin-bottom: 0.5rem;
+        font-family: monospace;
+      }
+      .card-title {
+        font-size: 1.15rem;
+        font-weight: 700;
+        margin-bottom: 0.6rem;
+      }
+      .card-desc {
+        font-size: 0.92rem;
+        line-height: 1.6;
+        opacity: 0.85;
+        margin-bottom: 1.2rem;
+      }
+      .tag-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.4rem;
+        margin-top: auto;
+      }
+      .tag-list span {
+        font-family: monospace;
+        font-size: 0.75rem;
+        padding: 0.2rem 0.55rem;
+        border-radius: 0.35rem;
+        background: rgba(150, 150, 150, 0.12);
+        border: 1px solid rgba(150, 150, 150, 0.2);
+      }
+      .toolkit-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 1.5rem;
+      }
+      .toolkit-group h4 {
+        font-size: 0.95rem;
+        font-weight: 600;
+        margin-bottom: 0.75rem;
+        opacity: 0.85;
+      }
+      .Badge-group {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+      }
+      .Badge-group span {
+        font-family: monospace;
+        font-size: 0.8rem;
+        padding: 0.3rem 0.7rem;
+        border-radius: 0.4rem;
+        background: rgba(255, 107, 1, 0.08);
+        border: 1px solid rgba(255, 107, 1, 0.25);
+      }
+    </style>
 
     {
       featuredPosts.length > 0 && (
